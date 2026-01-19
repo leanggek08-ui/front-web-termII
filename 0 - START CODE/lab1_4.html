@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 1_4</title>
+</head>
+<body>
+    <h2 id="counter-view">0</h2>
+    <button id="inc-btn">+1</button>
+    <script>
+        let count =0;
+        const counterview = document.getElementById("counter-view")
+        const button = document.getElementById("inc-btn")
+        function counter(){
+            count++;
+            counterview.textContent= count
+        }
+        button.addEventListener("click",counter)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 1_6</title>
+</head>
+<body>
+    <div id ="card">
+        <h3 id = "user-name"></h3>
+        <p id="user-role"></p>
+    </div>
+    <button id="promote-btn">Prmote to admin</button>
+    <script>
+        const usernamr= document.getElementById("user-name")
+        const roles = document.getElementById("user-role")
+        const button = document.getElementById("promote-btn")
+        let user ={name:"Sok" , role:"student"}
+        function render(){
+            roles.textContent = user.role;
+            usernamr.textContent=user.name;
+
+        }
+        button.addEventListener("click",()=>{
+            user.role = "Admin";
+            render();
+        });
+
+        render();
+    </script>
+</body>
+</html>

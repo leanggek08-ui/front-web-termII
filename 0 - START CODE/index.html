@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MENU -->
+  <nav>
+    <button id="menu-play" class="active">Play Quiz</button>
+    <button id="menu-edit">Edit Quiz</button>
+  </nav>
+
+  <!-- START VIEW -->
+  <div id="start">Start Quiz!</div>
+
+  <!-- QUIZ VIEW -->
+  <div id="quiz">
+    <h2 id="question"></h2>
+    <div id="choices">
+      <div class="choice" id="A">A</div>
+      <div class="choice" id="B">B</div>
+      <div class="choice" id="C">C</div>
+      <div class="choice" id="D">D</div>
+    </div>
+  </div>
+
+  <!-- SCORE VIEW -->
+  <div id="scoreContainer"></div>
+
+  <!-- EDITOR VIEW -->
+  <div id="editor"></div>
+
+  <!-- JS FILES (ORDER MATTERS) -->
+  <script src="app.js"></script>
+  <script src="play.js"></script>
+   <script src="editor.js"></script>
+
+</body>
+</html>

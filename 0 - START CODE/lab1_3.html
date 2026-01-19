@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 1.3</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Enter name">
+    <button id="greet-btn">Greet</button>
+    <p id="message"></p>
+    <script>
+        const username = document.getElementById("username")
+        const message =document.getElementById("message")
+        const button = document.getElementById("greet-btn")
+        function welcome(){
+            const user_message = username.value;
+            if(user_message === ""){
+                message.textContent = "please enter a name"
+                message.style.color = "red"
+            }else{
+                message.textContent = `Hello ${user_message}`
+            }
+
+        }
+    button.addEventListener("click",welcome)
+    </script>
+</body>
+</html>

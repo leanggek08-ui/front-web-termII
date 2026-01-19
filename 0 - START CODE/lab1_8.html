@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1.8</title>
+</head>
+<body>
+    <input type="text" id="new-fruite">
+    <button id="add-btn">add fruit</button>
+    <ul id="fruite-list"></ul>
+    <script>
+        
+        const newfruit = document.getElementById("new-fruite")
+        const addbtn = document.getElementById("add-btn")
+        let fruites = ["Apple","Banana","Orange","Mango"];
+        const fruitelist = document.getElementById("fruite-list");
+    
+        function render(){
+            
+            //clears the current iannerhtml of fruit-list
+            fruitelist.innerHTML = "";
+            //loop through the fruit array
+            for (fruite of fruites){
+                const item = document.createElement("li");
+                item.textContent=fruite
+                fruitelist.appendChild(item)
+        }   
+        }
+        addbtn.addEventListener("click",()=>{
+            const newitem = newfruit.value;
+            fruites.push(newitem)
+            newfruit.value=""
+            render()
+        });
+
+        render()
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1_7</title>
+</head>
+<body>
+    <ul id="fruite-list"></ul>
+    <script>
+        let fruites = ["Apple","Banana","Orange","Mango"];
+        function render(){
+            const fruitelist = document.getElementById("fruite-list");
+            //clears the current innerhtml of fruit-list
+            fruitelist.innerHTML = "";
+            //loop through the fruit array
+            for (fruite of fruites){
+                const item = document.createElement("li");
+                item.textContent=fruite
+                fruitelist.appendChild(item)
+
+        }   
+        }
+        render()
+        
+    </script>
+</body>
+</html>

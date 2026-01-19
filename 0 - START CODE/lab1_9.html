@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab1_9</title>
+</head>
+<body>
+    <div id="tasks-container"></div>
+    <script>
+        const taskscontainer = document.getElementById("tasks-container")
+        let tasks = [{title:"Do homework",isUrgent:true},
+                     {title:"Wash dishes",isUrgent:false} ]
+        
+        function rendertask(){
+            for(task of tasks){
+                const item = document.createElement("div")
+                item.textContent = task.title
+                if(task.isUrgent){
+                    item.style.color ="red"
+                }else{
+                    item.style.color ="black"
+                }
+                taskscontainer.appendChild(item)
+            }
+
+        }
+        rendertask()
+    </script>
+</body>
+</html>

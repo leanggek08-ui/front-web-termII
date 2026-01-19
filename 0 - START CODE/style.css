@@ -1,0 +1,153 @@
+/* ---------------- RESET ---------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- BODY ---------------- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e00ff, #bb80ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+/* ---------------- MENU ---------------- */
+nav {
+  margin-top: 20px;
+  background: white;
+  border-radius: 30px;
+  padding: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+nav button {
+  border: none;
+  background: transparent;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.25s ease;
+}
+
+nav button:hover {
+  background: #eee;
+}
+
+nav .active {
+  background: #6e00ff;
+  color: white;
+}
+
+/* ---------------- VIEWS (COMMON) ---------------- */
+#start,
+#quiz,
+#editor,
+#scoreContainer {
+  margin-top: 40px;
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  width: 800px;
+  max-width: 90%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ---------------- START VIEW ---------------- */
+#start {
+  display: flex;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+#start:hover {
+  transform: scale(1.05);
+  background: #f3e5ff;
+}
+
+/* ---------------- QUIZ ---------------- */
+#question {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  justify-items: center;
+}
+
+.choice {
+  width: 220px;
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #6e00ff;
+  border-radius: 18px;
+  font-weight: bold;
+  color: #6e00ff;
+  background: #f6edff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.choice:hover {
+  background: #d9b3ff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ---------------- SCORE ---------------- */
+#scoreContainer h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* ---------------- EDITOR ---------------- */
+#editor h2 {
+  margin-bottom: 20px;
+}
+
+#editor div {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 15px;
+  background: #f3e5ff;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#editor div:hover {
+  background: #d9b3ff;
+}
+
+/* ---------------- ANIMATION ---------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 1_5</title>
+</head>
+<body>
+    <div id = "room" style="width:200px; height:200px;border:1px solid black;background-color: white;"></div>
+    <button id="switch-btn">light switch</button>
+    <p id="status-text">Lights are ON</p>
+    <script>
+        let isLightOn = true;
+        const room = document.getElementById("room")
+        const button = document.getElementById("switch-btn")
+        const status = document.getElementById("status-text")
+        function switchs(event){
+            if (isLightOn === true){
+                room.style.backgroundColor = "white"
+                status.textContent = "Lights are ON"
+                isLightOn = false
+            }else{
+                room.style.backgroundColor = "black"
+                status.textContent = "Lights are off"
+                isLightOn = true;
+            }
+        }
+        button.addEventListener("click",switchs)
+
+    </script>
+</body>
+</html>
